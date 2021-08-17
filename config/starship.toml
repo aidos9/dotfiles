@@ -1,0 +1,32 @@
+format = """
+[┌─>](bold green) $directory
+[│](bold green)\\($username\\)$git_branch$git_status$package
+[└─>](bold green)$status """
+add_newline = false
+
+[character]
+success_symbol = "[➜](bold green)"
+
+[username]
+disabled = false
+show_always = true
+style_user = "bold bright-purple"
+format = "[$user]($style)"
+
+[directory]
+truncation_length = 24
+truncation_symbol = "…/"
+style = "bold cyan"
+read_only_style = "bold bright-red"
+
+[git_branch]
+format = " on [$symbol$branch]($style)"
+
+[package]
+format = " [$symbol$version]($style)"
+symbol = "v"
+
+[status]
+format = " [\\[$status\\]]($style)"
+disabled = false
+style = "bold red"

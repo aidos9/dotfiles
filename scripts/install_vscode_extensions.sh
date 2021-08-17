@@ -1,0 +1,34 @@
+#!/bin/bash
+
+code --install-extension 13xforever.language-x86-64-assembly
+code --install-extension alefragnani.Bookmarks
+code --install-extension austin.code-gnu-global
+code --install-extension bungcip.better-toml
+code --install-extension chrmarti.regex
+code --install-extension CoenraadS.bracket-pair-colorizer
+code --install-extension Equinusocio.vsc-community-material-theme
+code --install-extension Equinusocio.vsc-material-theme
+code --install-extension equinusocio.vsc-material-theme-icons
+code --install-extension esbenp.prettier-vscode
+code --install-extension formulahendry.code-runner
+code --install-extension Gruntfuggly.todo-tree
+code --install-extension HookyQR.beautify
+code --install-extension janisdd.vscode-edit-csv
+code --install-extension jolaleye.horizon-theme-vscode
+code --install-extension matklad.rust-analyzer
+code --install-extension MaxfieldWalker.vscode-color-theme-spirited-away
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-python.python
+code --install-extension ms-python.vscode-pylance
+code --install-extension ms-vscode.cmake-tools
+code --install-extension ms-vscode.cpptools
+code --install-extension ms-vscode.hexeditor
+code --install-extension sainnhe.gruvbox-material
+code --install-extension serayuzgur.crates
+code --install-extension Shan.code-settings-sync
+code --install-extension skyapps.fish-vscode
+code --install-extension teabyii.ayu
+code --install-extension twxs.cmake
+code --install-extension vadimcn.vscode-lldb
+code --install-extension vscode-icons-team.vscode-icons
+code --install-extension wayou.vscode-todo-highlight

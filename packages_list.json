@@ -1,0 +1,155 @@
+{
+	"packages" : [
+		{
+			"name" : "git",
+			"supported-package-managers" : ["brew", "yay", "pacman", "apt"]
+		},
+		{
+			"name" : "fish",
+			"configs" : [
+				{
+					"source" : "config/fish",
+					"dest" : "%(HOME)/.config/fish"
+				}
+			],
+			"supported-package-managers" : ["brew", "apt", "yay", "pacman"]
+		},
+		{
+			"name" : "starship",
+			"url" : "https://starship.rs/install.sh",
+			"install-cmds" : ["install.sh -b %(LOCAL_BIN_DIR)"],
+			"configs" : [
+				{
+					"source" : "config/starship.toml",
+					"dest" : "%(HOME)/.config/startship.toml"
+				}
+			],
+			"supported-package-managers" : ["brew"]
+		},
+		{
+			"name" : "neovim",
+			"configs" : [
+				{
+					"source" : "config/neovim/",
+					"dest" : "%(HOME)/.config/nvim/"
+				}
+			],
+			"supported-package-managers" : ["brew", "apt", "yay", "pacman"]
+		},
+		{
+			"name" : "firacode-nerdfont",
+			"url" : "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip",
+			"install-cmds" : ["unzip -d FiraCode FiraCode.zip", "cp FiraCode/* %(FONT_DIR)"],
+			"supported-package-managers" : null
+		},
+		{
+			"name" : "visual-studio-code",
+			"configs" : [
+				{
+					"source" : "config/code/settings.json",
+					"dest" : "%(HOME)/.config/Code/User/settings.json",
+					"platform" : "linux"
+				},
+				{
+					"source" : "config/code/settings.json",
+					"dest" : "%(HOME)/Library/Application Support/Code/User/settings.json",
+					"platform" : "macos"
+				}
+			],
+			"name_yay" : "visual-studio-code-bin",
+			"name_brew" : "visual-studio-code",
+			"supported-package-managers" : ["yay", "brew"],
+			"post-install-cmds": ["bash scripts/install_vscode_extensions.sh"],
+			"disabled": true
+		},
+		{
+			"name": "wget",
+			"supported-package-managers" : ["yay", "brew", "pacman", "apt"]
+		},
+		{
+			"name" : "youtube-dl",
+			"supported-package-managers" : ["brew"],
+			"disabled": true
+		},
+		{
+			"name" : "cmake",
+			"supported-package-managers" : ["brew", "yay", "pacman", "apt"]
+		},
+		{
+			"name" : "bitwarden-cli",
+			"supported-package-managers" : ["yay", "brew"],
+			"disabled": true
+		},
+		{
+			"name" : "nasm",
+			"supported-package-managers" : ["yay", "brew", "pacman", "apt"],
+			"disabled": true
+		},
+		{
+			"name" : "yasm",
+			"supported-package-managers" : ["yay", "brew", "pacman", "apt"],
+			"disabled": true
+		},
+		{
+			"name" : "virtualbox",
+			"supported-package-managers" : ["yay", "pacman", "brew", "apt"],
+			"disabled": true
+		},
+		{
+			"name" : "brave",
+			"supported-package-managers" : ["brew", "yay"],
+			"name_brew" : "brave-browser",
+			"name_yay" : "brave-bin",
+			"disabled": true
+		},
+		{
+			"name" : "chrome",
+			"supported-package-managers" : ["brew", "pacman", "yay", "apt"],
+			"name_brew" : "google-chrome",
+			"name_apt" : "chromium-browser",
+			"name_yay" : "chromium",
+			"name_pacman" : "chromium",
+			"disabled": true
+		},
+		{
+			"name" : "firefox",
+			"supported-package-managers" : ["brew", "apt", "yay", "pacman"],
+			"disabled": true
+		},
+		{
+			"name" : "notion",
+			"supported-package-managers" : ["brew", "yay"],
+			"name_yay": "notion-app",
+			"disabled": true
+		},
+		{
+			"name" : "hyper",
+			"configs" : [
+				{
+					"source" : "config/hyper.js",
+					"dest" : "%(HOME)/.hyper.js"
+				}
+			],
+			"supported-package-managers" : ["brew", "yay"],
+			"disabled": true
+		},
+		{
+			"name" : "rust-analyzer",
+			"supported-package-managers" : ["brew", "pacman", "yay"]
+		},
+		{
+			"name" : "rustup",
+			"url" : "https://sh.rustup.rs",
+			"install-cmds" : ["bash rustup-init.sh"],
+			"post-install-cmds" : ["rustup update", "rustup component add clippy", "cargo install cargo-update cargo-audit cargo-checkmate"],
+			"supported-package-managers" : null
+		},
+		{
+			"name" : "packer",
+			"repo" : "https://github.com/wbthomason/packer.nvim",
+			"install-cmds" : ["mv packer.nvim %(HOME)/.local/share/nvim/site/pack/packer/start/packer.nvim"],	
+			"post-install-cmds" : ["nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'"],
+			"supported-package-managers" : null
+		}
+	]
+}
