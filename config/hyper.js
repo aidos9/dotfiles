@@ -21,6 +21,7 @@ module.exports = {
         letterSpacing: 0,
         // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
         cursorShape: 'BLOCK',
+        selectionColor: 'rgb(255, 255, 255)',
         // set to `true` (without backticks and without quotes) for blinking cursor
         cursorBlink: false,
         // default: `true` (without backticks and without quotes) on Windows and Linux, ignored on macOS
@@ -68,7 +69,7 @@ module.exports = {
     //   `hyperpower`
     //   `@company/project`
     //   `project#1.0.1`
-    plugins: ['hyper-rose-pine', 'hypercwd', 'hyper-opacity'],
+    plugins: ['nord-hyper', 'hypercwd', 'hyper-opacity'],
     // in development, you can create a directory under
     // `~/.hyper_plugins/local/` and include it here
     // to load it and avoid it being `npm install`ed
